@@ -1,0 +1,116 @@
+.activity-feed-card {
+    background: var(--admin-card, rgba(30, 41, 59, 0.4));
+    border: 1px solid var(--admin-border, rgba(255, 255, 255, 0.1));
+    border-radius: 16px;
+    padding: 20px;
+    backdrop-filter: blur(12px);
+    height: 100%;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.live-indicator {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.75rem;
+    color: var(--admin-success, #10b981);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background: rgba(16, 185, 129, 0.1);
+    padding: 4px 8px;
+    border-radius: 12px;
+}
+
+.pulse {
+    width: 8px;
+    height: 8px;
+    background: var(--admin-success, #10b981);
+    border-radius: 50%;
+    animation: pulse-animation 1.5s infinite;
+}
+
+@keyframes pulse-animation {
+    0% {
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 6px rgba(16, 185, 129, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+    }
+}
+
+.feed-list {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+    padding-right: 4px;
+}
+
+/* Custom Scrollbar for feed */
+.feed-list::-webkit-scrollbar {
+    width: 4px;
+}
+
+.feed-list::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.feed-list::-webkit-scrollbar-thumb {
+    background: var(--admin-border);
+    border-radius: 4px;
+}
+
+.feed-item {
+    display: flex;
+    gap: 12px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.feed-item:last-child {
+    padding-bottom: 0;
+}
+
+.feed-item:last-child .connector-line {
+    display: none;
+}
+
+.feed-icon-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 24px;
+}
+
+.connector-line {
+    width: 2px;
+    flex: 1;
+    background: var(--admin-border, rgba(255, 255, 255, 0.1));
+    margin-top: 4px;
+    min-height: 20px;
+}
+
+.feed-content {
+    padding-top: 2px;
+}
+
+.feed-message {
+    color: var(--admin-text-primary, #fff);
+    font-size: 0.85rem;
+    margin: 0 0 4px 0;
+    line-height: 1.4;
+}
+
+.feed-time {
+    color: var(--admin-text-secondary, #94a3b8);
+    font-size: 0.7rem;
+}

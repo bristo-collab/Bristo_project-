@@ -1,0 +1,306 @@
+.subscriptions-dashboard {
+    padding: 120px 0 80px;
+    background-color: #f8fafc;
+    min-height: 100vh;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.dashboard-header h1 {
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+}
+
+.dashboard-header p {
+    color: var(--text-gray);
+}
+
+.savings-badge {
+    background: white;
+    padding: 20px 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+.savings-label {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--text-gray);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.savings-amount {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--accent-green);
+}
+
+/* Tabs */
+.dashboard-tabs {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 2px;
+}
+
+.tab-btn {
+    padding: 12px 24px;
+    border: none;
+    background: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-gray);
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.tab-btn:hover {
+    color: var(--primary-blue);
+}
+
+.tab-btn.active {
+    color: var(--primary-blue);
+}
+
+.tab-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--primary-blue);
+    border-radius: 3px 3px 0 0;
+}
+
+/* Subscriptions List */
+.subscriptions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 60px;
+}
+
+.sub-card {
+    background: white;
+    border-radius: 24px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.sub-card:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.sub-card.paused {
+    opacity: 0.8;
+}
+
+.sub-card-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.sub-product-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex: 1;
+}
+
+.sub-image {
+    width: 100px;
+    height: 100px;
+    background: #f1f5f9;
+    border-radius: 16px;
+    padding: 10px;
+}
+
+.sub-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.sub-details h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: var(--text-dark);
+}
+
+.status-tag {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.status-tag.active {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.status-tag.paused {
+    background: #fef9c3;
+    color: #854d0e;
+}
+
+.sub-meta {
+    display: flex;
+    gap: 20px;
+    color: var(--text-gray);
+    font-size: 0.9rem;
+}
+
+.sub-frequency-control {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sub-frequency-control label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--text-gray);
+    text-transform: uppercase;
+}
+
+.sub-frequency-control select {
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    background: #f8fafc;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.sub-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.action-btn {
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 1px solid #e2e8f0;
+    background: white;
+}
+
+.action-btn.pause {
+    color: #f59e0b;
+}
+
+.action-btn.resume {
+    color: #10b981;
+}
+
+.action-btn.skip {
+    color: var(--primary-blue);
+}
+
+.action-btn.cancel {
+    color: #ef4444;
+}
+
+.action-btn:hover {
+    background: #f1f5f9;
+}
+
+/* Perks Banner */
+.perks-banner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.perk-item {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.perk-icon {
+    font-size: 2.5rem;
+}
+
+.perk-item h4 {
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+.perk-item p {
+    color: var(--text-gray);
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+/* Empty State */
+.empty-subscriptions {
+    text-align: center;
+    padding: 60px;
+    background: white;
+    border-radius: 24px;
+}
+
+.empty-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.empty-subscriptions h2 {
+    margin-bottom: 10px;
+}
+
+.empty-subscriptions p {
+    color: var(--text-gray);
+    margin-bottom: 30px;
+}
+
+.explore-btn {
+    display: inline-block;
+    background: var(--primary-blue);
+    color: white;
+    padding: 15px 40px;
+    border-radius: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+@media (max-width: 1024px) {
+    .sub-card-main {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .perks-banner {
+        grid-template-columns: 1fr;
+    }
+}
